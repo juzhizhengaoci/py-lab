@@ -31,7 +31,7 @@
 
 | 段 | 内容 | 过关标准 | 状态 |
 |---|---|---|---|
-| Part 1 | `socket` 起服务器：bind → listen → accept → recv → 手写 HTTP 响应 | `curl -v http://localhost:8888/` 打回 `Hello, World!`；能解释 `listen(1)` 的 1 是什么 | ⬜ |
+| Part 1 | `socket` 起服务器：bind → listen → accept → recv → 手写 HTTP 响应 | `curl -v http://localhost:8888/` 打回 `Hello, World!`；能解释 `listen(1)` 的 1 是什么 | ✅ 2026-10-15（`listen(1)` 待自答） |
 | Part 2 | 解析请求 → 构造 `environ` 字典 → handler 生成响应 → 抽成 `WSGIServer` 类 | 能跑通 WSGI 服务器；能说出 `environ` 里 5 个 key 的来历 | ⬜ |
 | Part 2+ | 自己加一条 404 路由（教程里没有） | 访问不存在的路径返回 404 而不是崩 | ⬜ |
 | Part 3 | 加并发。⚠️ 原文用 `os.fork()`，**Windows 上必须改写成 `multiprocessing` / `threading`** | 两个终端同时请求，第二个不用等第一个跑完 | ⬜ |
